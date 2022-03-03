@@ -1,0 +1,188 @@
+/*
+THIS FILE WAS DEVELOPED BY MEHMET GUDUK
+© 2022 COPYRIGHT, LICENSED WITH GPL-3.0 LICENSE, AUTHOR IS MEHMET GUDUK
+*/
+
+// ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| //
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+:root {
+    --black1: #000000;
+    --gray1: #333333;
+    --gray2: #666666;
+    --white1: #ffffff;
+    --white2: #eaeaea;
+    --blue1: #2690d4;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+html {
+    font-size: 8px;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-align: center;
+    background-color: var(--gray1);
+    color: var(--white1);
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    padding: 1.6rem 0;
+    font-size: 2rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+// ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| //
+
+header {
+    height: 45rem;
+
+    div.bg-image {
+        background-image: url("./images/background-image.jpg");
+        height: 45rem;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0.6;
+        position: absolute;
+        z-index: -1;
+    }
+
+    div.content {
+        h1 {
+            padding-top: 11rem;
+        }
+
+        a.btn {
+            display: inline-block;
+            background-color: var(--gray1);
+            color: var(--white1);
+            border: 1px solid var(--gray2);
+            padding: 1rem 2rem;
+            margin: 0.5rem 0;
+            transition: background-color 0.3s, color 0.3s;
+
+            &:hover {
+                background-color: var(--white2);
+                color: var(--gray1);
+            }
+        }
+    }
+}
+
+// ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| //
+
+main {
+    section#section-a {
+        background-color: var(--white2);
+        color: var(--gray1);
+        padding: 3.2rem 0;
+    }
+    section#section-b {
+        padding: 2rem;
+
+        ul {
+            list-style-type: none;
+
+            li {
+                background-color: var(--white1);
+                color: var(--gray1);
+                margin-bottom: 1.5rem;
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.45), 0px 10px 10px rgba(0, 0, 0, 0.45);
+                opacity: 0.9;
+                transition: opacity 0.3s;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                div.col {
+                    user-select: none;
+                    cursor: pointer;
+
+                    div.col-content {
+                        padding: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+    section#section-c {
+        background-color: var(--white2);
+        color: var(--gray1);
+        padding: 5rem;
+    }
+
+    section#section-d {
+        div.box {
+            padding: 4rem;
+
+            &:first-child {
+                background-color: var(--blue1);
+            }
+        }
+    }
+}
+
+// ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| //
+
+footer {
+    padding: 5rem;
+    background-color: var(--black1);
+    div {
+        a {
+            color: var(--blue1);
+        }
+    }
+}
+
+// ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| //
+
+@media screen and (min-width: 600px) {
+    section#section-b {
+        li {
+            width: 28%;
+            margin: 1%;
+            display: inline-block;
+        }
+    }
+    div.box {
+        width: 50%;
+        float: left;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    html {
+        font-size: 9px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    html {
+        font-size: 10px;
+    }
+}
